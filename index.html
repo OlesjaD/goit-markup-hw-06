@@ -329,10 +329,9 @@
             </div>
             <div class="subscribe">
                 <b class="join">Підпишіться на розсилку</b>
-                <form action="email" placeholder="E-mail">
-                    <label for="">
-                        <input type="text" name="E-mail">
-                    </label>
+                <form class="form-subscribe" action="email" placeholder="E-mail">
+                    <label for="E-mail"></label>
+                    <input type="text" name="email" id="E-mail">
                     <button type="submit" class="btn-form">
                         <span class="btn-name">Підписатися</span>
                         <svg class="icon-send" width="24" height="24">
@@ -358,21 +357,30 @@
                 <div class="form-groupe">
                     <label class="form-label" for="name">Ім'я</label>
                     <input class="form-input" type="text" name="name" id="name">
+                    <svg class="form-icon" width="18px" height="18px">
+                      <use href="./images/icons.svg#icon-person-black"></use>
+                    </svg>
                 </div>
 
                 <div class="form-groupe">
                     <label class="form-label" for="tel">Телефон</label>
                     <input class="form-input" type="tel" name="tel" id="tel">
+                    <svg class="form-icon" width="18px" height="18px">
+                      <use href="./images/icons.svg#icon-phone-black"></use>
+                    </svg>
                 </div>
 
                 <div class="form-groupe">
                     <label class="form-label" for="mail">Пошта</label>
                     <input class="form-input" type="email" name="mail" id="mail">
+                    <svg class="form-icon" width="18px" height="18px">
+                      <use href="./images/icons.svg#icon-email-black"></use>
+                    </svg>
                 </div>
 
                 <div class="form-groupe">
                     <label class="form-label" for="comment">Коментар</label>
-                    <textarea class="form-comment" name="comment" id="comment" rows="10" placeholder="Введіть текст"></textarea>
+                    <textarea class="form-comment" name="comment" id="comment" rows="6" placeholder="Введіть текст"></textarea>
                 </div>
 
                 <div class="form-agree">
