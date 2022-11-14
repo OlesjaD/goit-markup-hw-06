@@ -740,10 +740,45 @@ textarea{
 
     text-align: center;
 }
+.checkbox-label{
+    display: flex;
+    align-items: center;
+    /*outline: 2px solid tomato;*/
+}
 .checkbox {
-    -moz-appearance: none;
+    /*-moz-appearance: none;
     -webkit-appearance: none;
-    appearance: none;
+    appearance: none;*/
+
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.checkbox:checked + .icon{
+    background-color: var(--accent-color);
+    background-origin: border-box;
+    border-color: var(--accent-color);
+}
+
+.form-agree .icon{
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+
+    border: var(--title-text-color) 2px solid;
+
+    border-radius: 2px;
+
+    margin-right: 7px;
 }
 
 .form-agree .link{
