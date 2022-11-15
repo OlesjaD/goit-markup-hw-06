@@ -671,8 +671,25 @@ img{
 
     margin-bottom: 12px;
 }
-.close-btn:focus-within .modal{
-    fill: var(--accent-color);
+.icon-close .unchecked{
+    opacity: 0;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-btn:focus .icon-close .unchecked{
+    opacity: 1;
+}
+
+.close-btn .checked{
+   opacity: 1;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-btn:focus .icon-close .checked {
+    opacity: 0;
 }
 
 .form-groupe{
@@ -683,7 +700,9 @@ img{
     flex-direction: column;
 }
 
-.form-groupe input{
+.form-groupe .form-input{
+    position: relative;
+
     margin: 0;
     padding-top: 11px;
     padding-bottom: 11px;
@@ -693,6 +712,10 @@ img{
     border-radius: 4px;
 
     cursor: pointer;
+
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input:focus {
     border-color: var(--accent-color);
@@ -708,18 +731,7 @@ img{
 
     color: var(--primary-text-color);
 }
-.form-input{
-    position: relative;
 
-    margin: 0;
-    padding: 11px 12px;
-    
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-}
-.form-input:focus+.form-icon {
-    fill: var(--accent-color);
-}
 input:focus-visible,
 textarea:focus-visible {
     outline: none;
@@ -743,6 +755,8 @@ textarea{
 .checkbox-label{
     display: flex;
     align-items: center;
+
+    cursor: pointer;
     /*outline: 2px solid tomato;*/
 }
 .checkbox {
@@ -779,6 +793,15 @@ textarea{
     border-radius: 2px;
 
     margin-right: 7px;
+}
+.form-icon {
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus+.form-icon {
+    fill: var(--accent-color);
 }
 
 .form-agree .link{
