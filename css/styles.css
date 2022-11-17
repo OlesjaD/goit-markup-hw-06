@@ -543,6 +543,10 @@ img{
     width: 358px;
     height: 50px;
 
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    line-height: 1.25;
+
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
@@ -647,8 +651,12 @@ img{
     border: 1px solid rgba(0, 0, 0, 0.1);
 
     background-color: transparent;
-
+    
     cursor: pointer;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form {
     /*position: relative;*/
@@ -671,7 +679,13 @@ img{
 
     margin-bottom: 12px;
 }
-.icon-close .unchecked{
+.icon-close{
+    fill: #000000;
+}
+.close-btn:hover .icon-close {
+    fill: var(--accent-color);
+}
+/*.icon-close .unchecked{
     opacity: 0;
     transition-property: fill;
     transition-duration: 250ms;
@@ -690,7 +704,7 @@ img{
 
 .close-btn:focus .icon-close .checked {
     opacity: 0;
-}
+}*/
 
 .form-groupe{
     position: relative;
@@ -727,6 +741,10 @@ img{
     
 }
 .form-label{
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+
     margin-bottom: 4px;
 
     color: var(--primary-text-color);
@@ -748,11 +766,17 @@ textarea{
     border-radius: 4px;
 }
 .form-agree{
+    display: flex;
+    justify-content: center;
+
     margin-bottom: 30px;
 
     text-align: center;
 }
 .checkbox-label{
+    line-height: 1.71;
+    color: var(--primary-text-color);
+
     display: flex;
     align-items: center;
 
@@ -807,7 +831,8 @@ textarea{
 .form-agree .link{
     color: var(--accent-color);
     text-decoration: underline;
-    
+    margin-left: 4px;
+
     cursor: pointer;
 }
 .btn-form-service{
